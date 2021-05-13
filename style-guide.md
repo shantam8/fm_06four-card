@@ -32,3 +32,12 @@ The designs were created to the following widths:
 
 - Family: [Poppins](https://fonts.google.com/specimen/Poppins)
 - Weights: 200, 400, 600
+
+
+
+32 27 29
+
+351 251
+
+
+

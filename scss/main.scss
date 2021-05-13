@@ -17,11 +17,19 @@ body {
 
 h1 {
   font-weight: 600;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 2.2rem;
+  }
 }
 
 h2 {
   font-size: 2rem;
   font-weight: 200;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 2.2rem;
+  }
 }
 
 p {
@@ -30,20 +38,45 @@ p {
   font-size: 1.2rem;
   font-weight: 400;
   line-height: 1.3rem;
+
+  @media screen and (min-width: 1200px) {
+    width: 36rem;
+    margin: 1rem auto 5rem auto;
+  }
 }
 
 h3 {
   font-weight: 600;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 1.2rem;
+  }
 }
 
 h4 {
   font-size: 0.8rem;
   font-weight: 200;
   line-height: 1.3rem;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
 }
 
 .cards {
   width: 100%;
+
+  @media screen and (min-width: 1200px) {
+    display: grid;
+    width: 70rem;
+    margin: 0 auto;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: " . team . " "supervisor team calculator" "supervisor karma calculator" ". karma .";
+    justify-items: center;
+    grid-row-gap: 2rem;
+  }
 
   .card {
     position: relative;
@@ -55,6 +88,12 @@ h4 {
     padding: 1.5rem;
     box-shadow: 0 4px 10px $grayishBlue;
 
+    @media screen and (min-width: 1200px) {
+      margin: 0;
+      height: 15.6875;
+      width: 21.9375rem;
+    }
+
     .image {
       position: absolute;
       right: 1.5rem;
@@ -64,17 +103,33 @@ h4 {
 
   .supervisor {
     border-top: 4px solid $cyan;
+
+    @media screen and (min-width: 1200px) {
+      grid-area: supervisor;
+    }
   }
 
   .team {
     border-top: 4px solid $red;
+
+    @media screen and (min-width: 1200px) {
+      grid-area: team;
+    }
   }
 
   .karma {
     border-top: 4px solid $orange;
+
+    @media screen and (min-width: 1200px) {
+      grid-area: karma;
+    }
   }
 
   .calculator {
     border-top: 4px solid $blue;
+
+    @media screen and (min-width: 1200px) {
+      grid-area: calculator;
+    }
   }
 }

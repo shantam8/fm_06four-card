@@ -18,9 +18,21 @@ h1 {
   font-weight: 600;
 }
 
+@media screen and (min-width: 1200px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+}
+
 h2 {
   font-size: 2rem;
   font-weight: 200;
+}
+
+@media screen and (min-width: 1200px) {
+  h2 {
+    font-size: 2.2rem;
+  }
 }
 
 p {
@@ -31,8 +43,21 @@ p {
   line-height: 1.3rem;
 }
 
+@media screen and (min-width: 1200px) {
+  p {
+    width: 36rem;
+    margin: 1rem auto 5rem auto;
+  }
+}
+
 h3 {
   font-weight: 600;
+}
+
+@media screen and (min-width: 1200px) {
+  h3 {
+    font-size: 1.2rem;
+  }
 }
 
 h4 {
@@ -41,8 +66,31 @@ h4 {
   line-height: 1.3rem;
 }
 
+@media screen and (min-width: 1200px) {
+  h4 {
+    font-size: 1rem;
+    margin-top: 0.5rem;
+  }
+}
+
 .cards {
   width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .cards {
+    display: -ms-grid;
+    display: grid;
+    width: 70rem;
+    margin: 0 auto;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -ms-grid-rows: (1fr)[4];
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-areas: " . team . " "supervisor team calculator" "supervisor karma calculator" ". karma .";
+    justify-items: center;
+    grid-row-gap: 2rem;
+  }
 }
 
 .cards .card {
@@ -57,6 +105,14 @@ h4 {
           box-shadow: 0 4px 10px #a3a5ae;
 }
 
+@media screen and (min-width: 1200px) {
+  .cards .card {
+    margin: 0;
+    height: 15.6875;
+    width: 21.9375rem;
+  }
+}
+
 .cards .card .image {
   position: absolute;
   right: 1.5rem;
@@ -67,15 +123,39 @@ h4 {
   border-top: 4px solid #45d3d3;
 }
 
+@media screen and (min-width: 1200px) {
+  .cards .supervisor {
+    grid-area: supervisor;
+  }
+}
+
 .cards .team {
   border-top: 4px solid #ea5353;
+}
+
+@media screen and (min-width: 1200px) {
+  .cards .team {
+    grid-area: team;
+  }
 }
 
 .cards .karma {
   border-top: 4px solid #fcaf4a;
 }
 
+@media screen and (min-width: 1200px) {
+  .cards .karma {
+    grid-area: karma;
+  }
+}
+
 .cards .calculator {
   border-top: 4px solid #549ef2;
+}
+
+@media screen and (min-width: 1200px) {
+  .cards .calculator {
+    grid-area: calculator;
+  }
 }
 /*# sourceMappingURL=main.css.map */
